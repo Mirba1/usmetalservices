@@ -1,5 +1,6 @@
 import Link from "next/link";
 import {Location, Mail, Phone} from "@/assets/icons/Icons";
+import ContactForm from "@/components/common/ContactForm";
 
 function ContactPage() {
     return (
@@ -11,41 +12,9 @@ function ContactPage() {
                 <h1 className='text-3xl md:text-6xl my-10'>
                     Get in Touch with Us!
                 </h1>
-                <form className="space-y-6 mb-20">
-                    <div className="flex flex-col gap-5 md:flex-row md:space-x-4">
-                        <input
-                            type="text"
-                            placeholder="First Name"
-                            className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#fecc52] focus:border-transparent"/>
-                        <input
-                            type="text"
-                            placeholder="Last Name"
-                            className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#fecc52] focus:border-transparent"/>
-                    </div>
-
-                    <input
-                        type="tel"
-                        placeholder="Phone"
-                        className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#fecc52] focus:border-transparent"/>
-
-                    <input
-                        type="email"
-                        placeholder="Email"
-                        className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#fecc52] focus:border-transparent"/>
-
-                    <textarea
-                        placeholder="Message"
-                        className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#fecc52] focus:border-transparent"
-                    ></textarea>
-
-                    <button
-                        type="submit"
-                        className="w-full bg-[#fecc52] text-black p-4 rounded-lg hover:bg-black hover:text-[#fecc52] transition-colors">
-                        Submit
-                    </button>
-                </form>
+                <ContactForm/>
             </div>
-            <div className="flex flex-col md:flex-row gap-10 justify-around items-center  w-full ">
+            <div className="flex flex-col md:flex-row gap-10 justify-around items-center mb-20 w-full ">
                 <div className="flex flex-col items-center justify-center">
                     <Location/>
                     <p className="font-medium">800 E Northwest Hwy, #611,</p>
