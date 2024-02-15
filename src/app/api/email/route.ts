@@ -3,7 +3,7 @@ import nodemailer from 'nodemailer';
 import Mail from 'nodemailer/lib/mailer';
 
 export async function POST(request: NextRequest) {
-    const { email, message, name } = await request.json();
+    const { email, message, name, service, phone } = await request.json();
 
     const transport = nodemailer.createTransport({
         service: 'gmail',
@@ -17,9 +17,18 @@ export async function POST(request: NextRequest) {
     const mailOptionsToYou: Mail.Options = {
         from: process.env.MY_EMAIL,
         to: process.env.MY_EMAIL,
-        subject: `Message from ${name} (${email})`,
-        text: `You have received a new message from ${name} (${email}). Check your admin panel for more details.\n\n Here is their message: \n\n${message}`,
-    };
+        subject: `New message from a Client`,
+        html: `
+        <div class="flex justify-center items-center">
+            <h1 class="text-4xl">New Message from ${name}</h1>
+            <p><strong>Email:</strong> ${email}</p>
+            <p><strong>Number:</strong> ${phone}</p>
+            <p><strong>What they are interested in:</strong> ${service}</p>
+            <p><strong>Message:</strong></p>
+            <p>${message}</p>
+            <p>Check your admin panel for more details.</p>
+        </div>
+    `,};
 
     // Confirmation email to the customer
     const mailOptionsToCustomer: Mail.Options = {
@@ -29,26 +38,10 @@ export async function POST(request: NextRequest) {
         text: `Hi ${name},\n\nThank you for reaching out! We have received your message and will get in touch with you soon.\n\nBest regards,\nUS Metal Services`,
     };
 
-    const sendMailPromise = (mailOptions: Mail.Options) =>
-        new Promise<string>((resolve, reject) => {
-            transport.sendMail(mailOptions, function (err) {
-                if (!err) {
-                    resolve('Email sent');
-                } else {
-                    reject(err.message);
-                }
-            });
-        });
-
-    try {
         // Send the email to yourself
-        await sendMailPromise(mailOptionsToYou);
+        await transport.sendMail(mailOptionsToYou);
         // Send the confirmation email to the customer
-        await sendMailPromise(mailOptionsToCustomer);
+        await transport.sendMail(mailOptionsToCustomer);
 
-        return NextResponse.json({ message: 'Your message was successfully sent \n\n We will get in touch with you soon' });
-    } catch (err) {
-        return NextResponse.json({ error: err }, { status: 500 });
-    }
 }
 
