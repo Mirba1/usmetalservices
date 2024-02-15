@@ -5,6 +5,8 @@ import dynamic from "next/dynamic";
 
 const Footer = dynamic(()=>import("@/components/layout/Footer"))
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from '@vercel/analytics/react';
+
 export const metadata: Metadata = {
   title: "US Metal services",
   description: "US Metal Services offers custom metalwork solutions for residential and commercial projects. Explore our services for gates, railings, staircases, and more.",
@@ -27,6 +29,7 @@ export default function RootLayout({
       {children}
       <Footer/>
     <SpeedInsights />
+    <Analytics/>
 
     </body>
     </html>
