@@ -63,7 +63,7 @@ function ServicesPage() {
                 </script>
             </Head>
             <h1 className='text-3xl md:text-6xl my-10 text-center border-b border-black'>
-                SERVICES
+                METAL SERVICES
 
             </h1>
             <div className='flex flex-col gap-20  px-8 sm:px-16 '>

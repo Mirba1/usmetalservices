@@ -33,14 +33,13 @@ function AboutPage()  {
             <div className='relative bg-black text-white'>
                 <Image src={welding2} alt='Craftsmanship in metalwork' loading={"eager"} fetchPriority={"high"}
                        className='opacity-40'/>
-                <main
-                    className='absolute top-[40%] sm:top-[50%] flex flex-col items-center justify-center w-full gap-3 sm:gap-7'>
-                    <h1 className='text-2xl md:text-4xl xl:text-8xl'>ABOUT - US METAL WORKS</h1>
-                    <h2 className='text-[11px] md:text-xl xl:text-3xl text-center'>We are the architects of precision
+                <div className='absolute top-[40%] sm:top-[50%] flex flex-col items-center justify-center w-full gap-3 sm:gap-7'>
+                    <h1 className='text-xl lg:text-3xl xl:text-8xl'>ABOUT - US METAL WORKS</h1>
+                    <h2 className='text-[11px] lg:text-xl xl:text-3xl text-center'>We are the architects of precision
                         metalwork, sculpting the<br className='hidden sm:block'/>  essence of durability and elegance
                         into the industrial landscape.<br/> staircases, rails, gates, window guards.
                     </h2>
-                </main>
+                </div>
             </div>
             <section className='flex flex-col gap-10 px-8 sm:px-16 my-16'>
                 <h3 className='flex justify-center text-6xl font-semibold'>Our Values</h3>

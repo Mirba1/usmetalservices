@@ -26,11 +26,12 @@ export default function RootLayout({
     </head>
     <body className='font-sans'>
     <Navbar/>
-      {children}
+    <div className='pt-32'>
+        {children}
+    </div>
       <Footer/>
     <SpeedInsights />
     <Analytics/>
-
     </body>
     </html>
   );

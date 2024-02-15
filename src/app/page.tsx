@@ -48,9 +48,9 @@ export default function Home() {
                 <Image src={smbgImage} alt='Custom-crafted metal staircases and rails' width={800} height={450} fetchPriority="high" loading="eager"
                        className='opacity-40 md:hidden' objectFit="cover" quality={35}/>
                 <div
-                    className='absolute top-[24%] sm:top-[50%] flex flex-col  items-center w-full gap-1 sm:gap-7 text-lg md:text-4xl lg:text-8xl'>
-                    <h1 className='font-bold text-center'>US METAL WORKS - DREAMS MEET DESIGN</h1>
-                    <h2 className='text-[12px] md:text-xl lg:text-2xl text-center'> Transform your space with our bespoke metal staircases, railings, and architectural metalwork.</h2>
+                    className='absolute top-[24%] sm:top-[50%] flex flex-col  items-center w-full gap-1 sm:gap-7  '>
+                    <h1 className='font-bold text-center text-sm lg:text-4xl xl:text-8xl'>US METAL WORKS - DREAMS MEET DESIGN</h1>
+                    <h1 className='text-[12px] md:text-xl lg:text-2xl text-center'> Transform your space with our bespoke metal staircases, railings, and architectural metalwork.</h1>
                     <Link href={'/contact'} prefetch={true}
                           className='bg-[#fecc52] py-1 px-3 text-black text-sm font-semibold  md:py-3 md:px-7 md:text-xl md:text-black'>
                         GET A QUOTE

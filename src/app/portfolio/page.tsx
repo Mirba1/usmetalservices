@@ -107,14 +107,13 @@ function PortfolioPage() {
                     })}
                 </script>
             </Head>
-            <h1 className='text-3xl md:text-6xl my-10 border-b border-black'>
+            <h2 className='text-3xl md:text-6xl my-10 border-b border-black'>
                 PORTFOLIO
 
-            </h1>
-            <div className="flex flex-col gap-10 items-center justify-center w-full p-5">
-                <div>
+            </h2>
+                <div className="flex flex-col md:flex-row gap-10 md:flex-wrap items-center justify-center w-full p-5">
                     {imageDetails.map((image, index) => (
-                        <div key={index} className="flex flex-col md:flex-row gap-5">
+                        <div key={index} className="flex flex-col">
                             <div className="overflow-hidden bg-black">
                                 <Image
                                     src={image.src}
@@ -128,7 +127,6 @@ function PortfolioPage() {
                         </div>
                     ))}
                 </div>
-            </div>
         </div>
     );
 }

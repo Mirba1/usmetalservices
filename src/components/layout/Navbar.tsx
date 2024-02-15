@@ -8,7 +8,7 @@ const SideBar = dynamic(()=>import("@/components/layout/SideBar"))
 
 const Navbar = () => {
     return (
-        <div className='bg-white text-black flex justify-between items-center py-6 px-8 sm:px-16'>
+        <div className='bg-white w-full z-50 fixed  text-black flex justify-between items-center py-6 px-8 sm:px-16'>
             <Link prefetch={true}  href={'/'}><Image src={logo}  alt='logo' loading={"eager"} fetchPriority={"high"} width={128} height={64}/></Link>
             <div className='gap-10 hidden items-center md:flex text-lg'>
                 <Link prefetch={true}  href={'/about'}>ABOUT</Link>

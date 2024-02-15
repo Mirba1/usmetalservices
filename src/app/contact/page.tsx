@@ -50,12 +50,12 @@ function ContactPage() {
             </Head>
 
             <h1 className='text-3xl md:text-6xl my-5 border-b border-black'>
-                CONTACT
+                CONTACT METAL EXPERTS
             </h1>
             <div className='flex flex-col justify-center items-center w-full my-20 bg-[#f7f8f9]'>
-                <h1 className='text-3xl md:text-6xl my-10'>
+                <h2 className='text-3xl md:text-6xl my-10'>
                     Get in Touch with Us!
-                </h1>
+                </h2>
                 <ContactForm/>
             </div>
             <div className="flex flex-col md:flex-row gap-10 justify-around items-center mb-10 w-full ">
