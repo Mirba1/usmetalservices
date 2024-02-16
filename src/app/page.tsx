@@ -6,42 +6,22 @@ import dynamic from "next/dynamic";
 import bgImage from '@/assets/images/MainPageImage.webp';
 import smbgImage from '@/assets/images/smMainImage.jpg';
 import {Star} from "@/assets/icons/Icons";
+import type {Metadata} from "next";
 
 const OurValuesSection = dynamic(() => import("@/components/common/OurValuesSection"));
 const LetsTalkSection = dynamic(() => import("@/components/common/LetsTalkSection"));
 
+
+export const metadata: Metadata = {
+    title: "US Metal services",
+    description: "US Metal Services offers custom metalwork solutions for residential and commercial projects. Explore our services for gates, railings, staircases, and more.",
+    keywords: "metalwork, custom gates, railings, staircases, metal fabrication, US Metal Services"
+
+};
+
 export default function Home() {
     return (
         <div>
-            <Head>
-                <title>Metal Works Services - Custom Crafted Staircases and Rails</title>
-                <meta name="description" content="Expert metal works services providing custom-crafted staircases, gates, window guards, and rails. Elevate your space with our designs. Get a quote today." />
-                <meta property="og:title" content="Metal Works Services - Custom Crafted Staircases and Rails" />
-                <meta property="og:description" content="Expert metal works services providing custom-crafted staircases, gates, window guards, and rails. Elevate your space with our designs. Get a quote today." />
-                <meta property="og:image" content="URL_TO_AN_IMAGE" />
-                <meta property="og:type" content="website" />
-                <link rel="canonical" href="https://usmetalservices.com/" />
-                <script type="application/ld+json">
-                    {JSON.stringify({
-                        "@context": "http://schema.org",
-                        "@type": "ProfessionalService",
-                        "name": "US Metal Services",
-                        "image": [
-                            "https://usmetalservices.com/example.jpg"
-                        ],
-                        "telephone": "YOUR_PHONE_NUMBER",
-                        "address": {
-                            "@type": "PostalAddress",
-                            "streetAddress": "800 E Northwest Hwy, #611,",
-                            "addressLocality": "PALATINE",
-                            "addressRegion": "IL",
-                            "postalCode": "60074",
-                            "addressCountry": "USA"
-                        },
-                        "description": "Providing expert metal works services including custom-crafted staircases, gates, window guards, and rails."
-                    })}
-                </script>
-            </Head>
             <div className=' relative bg-black text-white'>
                 <Image src={bgImage} alt='Custom-crafted metal staircases and rails' width={1900} height={1000} fetchPriority="high" loading="eager"
                        className='opacity-40 hidden md:block' objectFit="cover" quality={35}/>

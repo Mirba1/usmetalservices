@@ -28,7 +28,7 @@ const SideBar = () => {
         <div>
             <MenuIcon onClick={()=>setIsOpen(!isOpen)}/>
             {isOpen &&
-                <div className='absolute z-40 top-0 right-0 h-full w-full bg-white'>
+                <div className='fixed z-40 top-0 right-0 h-full w-full bg-white'>
                     <CloseIcon onClick={()=>setIsOpen(false)} className='relative left-[86%] top-6'/>
                     <div className='flex flex-col justify-center items-center '>
                         <Image src={logo} alt='USA metal services' width={200} height={200}/>
