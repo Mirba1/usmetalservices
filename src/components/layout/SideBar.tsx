@@ -31,12 +31,14 @@ const SideBar = () => {
                 <div className='fixed z-40 top-0 right-0 h-full w-full bg-white'>
                     <CloseIcon onClick={()=>setIsOpen(false)} className='relative left-[86%] top-6'/>
                     <div className='flex flex-col justify-center items-center '>
-                        <Image src={logo} alt='USA metal services' width={200} height={200}/>
+                        <Link prefetch={true} href={'/'}>
+                            <Image src={logo} alt='USA metal services' width={200} height={200}/>
+                        </Link>
                         <ul className=' flex flex-col justify-center items-center text-3xl mt-20 gap-7'>
-                            <Link href={'/about'}>ABOUT</Link>
-                            <Link href={'/services'}>SERVICES</Link>
-                            <Link href={'/portfolio'}>PORTFOLIO</Link>
-                            <Link href={'/contact'} className='bg-[#fecc52] py-1 px-5'>CONTACT</Link>
+                            <Link prefetch={true} href={'/about'}>ABOUT</Link>
+                            <Link prefetch={true} href={'/services'}>SERVICES</Link>
+                            <Link prefetch={true} href={'/portfolio'}>PORTFOLIO</Link>
+                            <Link prefetch={true} href={'/contact'} className='bg-[#fecc52] py-1 px-5'>CONTACT</Link>
                         </ul>
                         <div className='flex flex-col w-full justify-center items-center absolute bottom-0 text-lg text-center'>
                             <p>© Copyright 2024 All Right Reserved</p>

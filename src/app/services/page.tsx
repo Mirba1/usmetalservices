@@ -10,66 +10,36 @@ import customWork from "@/assets/images/Commercial-Metal-Design-600x607.webp"
 import metalGates from "@/assets/images/metal-gates-600x450.webp"
 
 import Head from 'next/head';
+import type {Metadata} from "next";
 
+
+
+export const metadata: Metadata = {
+    title: "Our Metalwork Services - US Metal Services",
+    description: "Discover our wide range of metalwork services including handrails, railings, staircases, window guards, custom works, and metal gates. Expert craftsmanship to elevate your space.",
+    keywords: "metalwork, handrails, railings, staircases, window guards, custom metalwork, metal gates, US Metal Services",
+
+};
 
 function ServicesPage() {
     return (
         <div className='mb-20 flex flex-col justify-center items-center w-full'>
             <Head>
-                <title>Custom Metalwork Services - US Metal Services</title>
-                <meta name="description"
-                      content="Explore our wide range of custom metalwork services including handrails, railings, staircases, window guards, custom orders, and metal gates. Crafted with precision and care by US Metal Services."/>
-                <meta property="og:title" content="Custom Metalwork Services - US Metal Services"/>
-                <meta property="og:description"
-                      content="Discover custom-designed metalwork services that combine safety, elegance, and innovative design to enhance your residential or commercial spaces."/>
-                <meta property="og:type" content="website"/>
-                <link rel="canonical" href="https://usmetalservices.com/services"/>
-                <script type="application/ld+json">
-                    {JSON.stringify({
-                        "@context": "http://schema.org",
-                        "@type": "ProfessionalService",
-                        "@id": "",
-                        "url": "https://usmetalworks/portfolio",
-                        "telephone": "+1 (224) 354-2494",
-                        "address": {
-                            "@type": "PostalAddress",
-                            "streetAddress": "800 E Northwest Hwy, #611,",
-                            "addressLocality": "Palatine",
-                            "addressRegion": "IL",
-                            "postalCode": "60074",
-                            "addressCountry": "USA"
-                        },
-                        "geo": {
-                            "@type": "GeoCoordinates",
-                            "latitude": 40.7128,
-                            "longitude": -74.0060
-                        },
-                        "openingHoursSpecification": [{
-                            "@type": "OpeningHoursSpecification",
-                            "dayOfWeek": [
-                                "Monday",
-                                "Tuesday",
-                                "Wednesday",
-                                "Thursday",
-                                "Friday",
-                                "Saturday",
-                                "Sunday"
-                            ],
-                            "opens": "24"
-                        }],
-                        "sameAs": [
-                            "https://www.instagram.com/usmetalservicesinc",]
-                    })}
-                </script>
+                <title>Our Metalwork Services - US Metal Services</title>
+                <meta name="description" content="Discover our wide range of metalwork services including handrails, railings, staircases, window guards, custom works, and metal gates. Expert craftsmanship to elevate your space." />
+                <meta name="keywords" content="metalwork, handrails, railings, staircases, window guards, custom metalwork, metal gates, US Metal Services" />
+                <meta property="og:title" content="Our Metalwork Services - US Metal Services" />
+                <meta property="og:description" content="Explore our expert metalwork services tailored to meet your needs. From handrails to custom gates, we ensure quality and craftsmanship." />
+                <meta property="og:type" content="website" />
+                <link rel="icon" href="/favicon.ico" />
             </Head>
             <h1 className='text-3xl md:text-6xl my-10 text-center border-b border-black'>
                 METAL SERVICES
-
             </h1>
             <div className='flex flex-col gap-20  px-8 sm:px-16 '>
                 <ul className='flex justify-around flex-col lg:flex-row items-center gap-5'>
                     <li className='flex flex-col gap-5 w-auto justify-center items-center text-center'>
-                        <Image src={handRail} alt="Elegant Metal Handrails by US Metal Services"
+                        <Image src={handRail} fetchPriority={"high"} loading={"eager"} height={240} width={240} alt="Elegant Metal Handrails by US Metal Services"
                                className="w-60 h-60 md:w-80 md:h-80 rounded-3xl"/>
                         <h2 className="text-2xl md:text-4xl text-[#fecc52] cursor-pointer hover:text-black">Handrails</h2>
                         <p className="mx-2 text-left">Elevate the safety and style of your home with our custom-designed
@@ -82,7 +52,7 @@ function ServicesPage() {
 
                     </li>
                     <li className='flex flex-col gap-5 w-auto justify-center items-center'>
-                        <Image src={Railings} alt="Custom Metal Railings Design"
+                        <Image src={Railings} fetchPriority={"high"} loading={"eager"} height={240} width={240} alt="Custom Metal Railings Design"
                                className="w-60 h-60 md:w-80 md:h-80 rounded-3xl"/>
                         <h2 className='text-2xl md:text-4xl text-[#fecc52] cursor-pointer hover:text-black'>Railings</h2>
                         <p className='mx-2 text-left'>Discover the perfect blend of safety and style with our bespoke
@@ -97,7 +67,7 @@ function ServicesPage() {
 
                     </li>
                     <li className='flex flex-col gap-5 w-auto justify-center items-center lg:mb-5'>
-                        <Image src={stairCases} alt="Elegant Custom Staircases"
+                        <Image src={stairCases} fetchPriority={"high"} loading={"eager"} height={240} width={240} alt="Elegant Custom Staircases"
                                className="w-60 h-60 md:w-80 md:h-80 rounded-3xl"/>
                         <h2 className='text-2xl md:text-4xl text-[#fecc52] cursor-pointer hover:text-black'>Staircases</h2>
                         <p className='mx-2 text-left '>Transform your space with our custom-built staircases, engineered
@@ -114,7 +84,7 @@ function ServicesPage() {
                 </ul>
                 <ul className='flex justify-around flex-col lg:flex-row items-center gap-5'>
                     <li className='flex flex-col gap-5 w-auto justify-center items-center'>
-                        <Image src={windowGuards} alt="Custom Window Guards Design"
+                        <Image src={windowGuards} fetchPriority={"low"} loading={"lazy"} height={240} width={240} alt="Custom Window Guards Design"
                                className="w-60 h-60 md:w-80 md:h-80 rounded-3xl"/>
                         <h2 className='text-2xl md:text-4xl text-[#fecc52] cursor-pointer hover:text-black'>Window
                             Guards</h2>
@@ -128,7 +98,7 @@ function ServicesPage() {
                             our window guard experts {'>'}</Link></p>
                     </li>
                     <li className='flex flex-col gap-5 w-auto justify-center items-center'>
-                        <Image src={customWork} alt="Bespoke Metal Design Projects"
+                        <Image src={customWork} fetchPriority={"low"} loading={"lazy"} height={240} width={240} alt="Bespoke Metal Design Projects"
                                className="w-60 h-60 md:w-80 md:h-80 rounded-3xl"/>
                         <h2 className='text-2xl md:text-4xl text-[#fecc52] cursor-pointer hover:text-black'>Custom
                             Orders</h2>
@@ -144,7 +114,7 @@ function ServicesPage() {
 
                     </li>
                     <li className='flex flex-col gap-5 w-auto justify-center items-center'>
-                        <Image src={metalGates} alt="Custom Designed Metal Gates"
+                        <Image src={metalGates} fetchPriority={"low"} loading={"lazy"} height={240} width={240} alt="Custom Designed Metal Gates"
                                className="w-60 h-60 md:w-80 md:h-80 rounded-3xl"/>
                         <h2 className='text-2xl md:text-4xl text-[#fecc52] cursor-pointer hover:text-black'>Metal
                             Gates</h2>
@@ -177,7 +147,7 @@ function ServicesPage() {
                     </button>
                 </div>
                 <div className="flex-1">
-                    <Image src={welding} width={500} height={400} alt="Expert Welding Services"
+                    <Image src={welding} width={500} fetchPriority={"low"} loading={"lazy"} height={400} alt="Expert Welding Services"
                            className="object-cover w-auto h-96"/>
                 </div>
             </div>

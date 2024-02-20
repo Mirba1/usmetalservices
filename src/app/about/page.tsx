@@ -4,39 +4,26 @@ import welding2 from '@/assets/images/weldin2.webp'
 import working from '@/assets/images/working.webp'
 import working2 from '@/assets/images/working2.webp'
 import Image from "next/image";
-import Head from 'next/head';
 import React from "react";
+import type {Metadata} from "next";
 
+export const metadata: Metadata = {
+    title: "About US Metal Service - Precision & Craftsmanship in Metalwork",
+    description: "Discover the artistry behind US Metal Services. Learn about our journey in precision metalwork, our values, mission, and the legacy we're building in the industry.",
+    keywords: "about US Metal Services, metalwork craftsmanship, metal services history, metalwork values, metalwork mission",
+};
 function AboutPage()  {
+
     return (
         <div>
-            <Head>
-                <title>About Us - US Metal Services | Precision Metalwork</title>
-                <meta name="description"
-                      content="Learn about US Metal Services, our values, mission, and the story behind our dedication to providing precision metalwork and stylish solutions for homes and businesses."/>
-                <meta property="og:title" content="About Us - US Metal Services | Precision Metalwork"/>
-                <meta property="og:description"
-                      content="Discover the values and mission that drive US Metal Services, our commitment to precision metalwork, and how we're transforming the industrial landscape with elegance and durability."/>
-                <meta property="og:image" content="URL_TO_AN_IMAGE"/>
-                <meta property="og:type" content="website"/>
-                <script type="application/ld+json">
-                    {JSON.stringify({
-                        "@context": "http://schema.org",
-                        "@type": "Organization",
-                        "name": "US Metal Services",
-                        "url": "https://usmetalservices.com/about",
-                        "logo": "https://usmetalservices.com/logo.png",
-                        "description": "US Metal Services specializes in precision metalwork, offering bespoke solutions for homes and businesses.",
-                    })}
-                </script>
-            </Head>
             <div className='relative bg-black text-white'>
                 <Image src={welding2} alt='Craftsmanship in metalwork' loading={"eager"} fetchPriority={"high"}
                        className='opacity-40'/>
-                <div className='absolute top-[40%] sm:top-[50%] flex flex-col items-center justify-center w-full gap-3 sm:gap-7'>
+                <div
+                    className='absolute top-[40%] sm:top-[50%] flex flex-col items-center justify-center w-full gap-3 sm:gap-7'>
                     <h1 className='text-xl lg:text-3xl xl:text-8xl'>ABOUT - US METAL WORKS</h1>
                     <h2 className='text-[11px] lg:text-xl xl:text-3xl text-center'>We are the architects of precision
-                        metalwork, sculpting the<br className='hidden sm:block'/>  essence of durability and elegance
+                        metalwork, sculpting the<br className='hidden sm:block'/> essence of durability and elegance
                         into the industrial landscape.<br/> staircases, rails, gates, window guards.
                     </h2>
                 </div>
@@ -56,12 +43,12 @@ function AboutPage()  {
 </p>
                     </div>
                     <div className="flex-1 ">
-                        <Image src={working} alt="Metalworking in action" height={500}/>
+                        <Image src={working} width={500} loading={"eager"} fetchPriority={"high"} alt="Metalworking in action" height={500}/>
                     </div>
                 </article>
                 <article className="flex flex-col lg:flex-row justify-between items-center bg-white">
                     <div className="hidden flex-1 lg:block">
-                        <Image src={working2} alt="Welding" height={500}/>
+                        <Image src={working2} alt="Welding" width={500} loading={"eager"} fetchPriority={"low"} height={500}/>
                     </div>
                     <div className="flex flex-col w-auto md:w-[50%] text-center items-center justify-center p-10">
                         <h2 className="text-3xl font-bold mb-4">Our Mission: Redefining Metal Craftsmanship</h2>
@@ -75,7 +62,7 @@ function AboutPage()  {
                         </p>
                     </div>
                     <div className="lg:hidden flex-1">
-                        <Image src={working2} alt="Metal Welding" height={500}/>
+                        <Image src={working2} alt="Metal Welding" width={500} loading={"eager"} fetchPriority={"low"} height={500}/>
                     </div>
                 </article>
                 <article className="flex flex-col lg:flex-row justify-between items-center bg-white">
@@ -92,7 +79,7 @@ function AboutPage()  {
                         </p>
                     </div>
                     <div className="flex-1 ">
-                        <Image src={welding} alt="Staircase factory" height={500}/>
+                        <Image src={welding} alt="Staircase factory"  width={500} loading={"lazy"} fetchPriority={"low"} height={500}/>
                     </div>
                 </article>
             </section>

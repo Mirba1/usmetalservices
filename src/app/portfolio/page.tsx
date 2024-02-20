@@ -1,8 +1,13 @@
 import Image from "next/image";
 import Head from "next/head";
+import type {Metadata} from "next";
 
 
-
+export const metadata: Metadata = {
+    title: "Portfolio - US Metal Services | Showcasing Metalwork Excellence",
+    description: "Explore our portfolio to see the craftsmanship and creativity of US Metal Services. From custom staircases to elegant metal railings and architectural metalwork, discover how we bring metal to life." ,
+    keywords: "metalwork portfolio, custom staircases, metal railings, architectural metalwork, US Metal Services projects",
+};
 
 function PortfolioPage() {
     const imagesContext = require.context('/src/assets/images/portfolio', true, /\.jpeg$/);
@@ -58,55 +63,6 @@ function PortfolioPage() {
 
     return (
         <div className='flex flex-col justify-center items-center w-full px-8 sm:px-16 my-20'>
-            <Head>
-                <title>Custom Metalwork Designs | Us Metal Services</title>
-                <meta name="description"
-                      content="Explore top-quality custom metalwork designs including staircases, gates, and window guards. Crafted with precision for both residential and commercial spaces."/>
-                <meta name="keywords" content="custom metalwork, staircases, metal gates, window guards, metal design"/>
-                <link rel="canonical" href="https://usmetalservices.com/portfolio"/>
-                <meta property="og:type" content="website"/>
-                <meta property="og:title" content="Custom Metalwork Designs | Your Company Name"/>
-                <meta property="og:description"
-                      content="Explore top-quality custom metalwork designs including staircases, gates, and window guards. Crafted with precision for both residential and commercial spaces."/>
-                <meta property="og:url" content="https://usmetalservices.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fweldin2.723e173a.webp&w=1920&q=75"/>
-                <script type="application/ld+json">
-                    {JSON.stringify({
-                        "@context": "http://schema.org",
-                        "@type": "ProfessionalService",
-                        "@id": "",
-                        "url": "https://usmetalworks/portfolio",
-                        "telephone": "+1 (224) 354-2494",
-                        "address": {
-                            "@type": "PostalAddress",
-                            "streetAddress": "800 E Northwest Hwy, #611,",
-                            "addressLocality": "Palatine",
-                            "addressRegion": "IL",
-                            "postalCode": "60074",
-                            "addressCountry": "USA"
-                        },
-                        "geo": {
-                            "@type": "GeoCoordinates",
-                            "latitude": 40.7128,
-                            "longitude": -74.0060
-                        },
-                        "openingHoursSpecification": [{
-                            "@type": "OpeningHoursSpecification",
-                            "dayOfWeek": [
-                                "Monday",
-                                "Tuesday",
-                                "Wednesday",
-                                "Thursday",
-                                "Friday",
-                                "Saturday",
-                                "Sunday"
-                            ],
-                            "opens": "24"
-                        }],
-                        "sameAs": [
-                            "https://www.instagram.com/usmetalservicesinc",]
-                    })}
-                </script>
-            </Head>
             <h2 className='text-3xl md:text-6xl my-10 border-b border-black'>
                 PORTFOLIO
 
@@ -120,7 +76,8 @@ function PortfolioPage() {
                                     alt={image.alt}
                                     width={340}
                                     height={202}
-                                    loading={index < 6 ? "eager" : "lazy"} // Eager load first 6 images, lazy-load the rest
+                                    loading={index < 6 ? "eager" : "lazy"}
+                                    fetchPriority={index < 6 ? "high" : "low"}
                                     className="transform hover:scale-110 transition duration-300 ease-in-out opacity-50 hover:opacity-100"
                                 />
                             </div>

@@ -2,53 +2,18 @@ import {Location, Mail, Phone} from "@/assets/icons/Icons";
 import ContactForm from "@/components/common/ContactForm";
 import React from "react";
 import Head from "next/head";
+import type {Metadata} from "next";
+
+
+export const metadata: Metadata = {
+    title: "Contact US Metal Services - Reach Out to Metalwork Experts",
+    description: "Contact US Metal Services for custom metalwork solutions. Get in touch for expert advice, consultations, and custom quotes tailored to your project needs." ,
+    keywords: "contact metalwork, metal services contact, custom metalwork consultation, US Metal Services contact",
+};
 
 function ContactPage() {
     return (
         <div className='flex flex-col justify-center items-center w-full '>
-            <Head>
-                <title>Contact Us - Us Metal Services</title>
-                <meta name="description"
-                      content="Reach out to Us Metal Services for custom metalwork projects. Contact us for expert advice, quotes, and to discuss your metalwork needs."/>
-                <meta name="keywords"
-                      content="contact metal services, custom metalwork, metalwork quotes, expert metalwork advice"/>
-                <link rel="canonical" href="https://usmetalservices.com/contact"/>
-                <meta property="og:title" content="Contact Us - Us Metal Services"/>
-                <meta property="og:description"
-                      content="Get in touch with Us Metal Services for bespoke metalwork designs and consultations."/>
-                <meta property="og:url" content="https://usmetalservices.com/contact"/>
-                <meta property="og:type" content="website"/>
-                <meta name="twitter:card" content="summary"/>
-                <meta name="twitter:title" content="Contact Us - Us Metal Services"/>
-                <meta name="twitter:description"
-                      content="Reach out for custom metalwork designs and expert consultations at Us Metal Services."/>
-                <script type="application/ld+json">
-                    {JSON.stringify({
-                        "@context": "http://schema.org",
-                        "@type": "Organization",
-                        "name": "Us Metal Services",
-                        "url": "https://usmetalservices.com/contact",
-                        "logo": "https://usmetalservices.com/logo.png",
-                        "contactPoint": [{
-                            "@type": "ContactPoint",
-                            "telephone": "+1 (224) 354-2494",
-                            "contactType": "customer service",
-                            "areaServed": "US",
-                            "availableLanguage": ["English"]
-                        }],
-                        "address": {
-                            "@type": "PostalAddress",
-                            "streetAddress": "800 E Northwest Hwy, #611",
-                            "addressLocality": "Palatine",
-                            "addressRegion": "IL",
-                            "postalCode": "60074",
-                            "addressCountry": "US"
-                        }
-                    })}
-                </script>
-
-            </Head>
-
             <h1 className='text-3xl md:text-6xl my-5 border-b border-black'>
                 CONTACT METAL EXPERTS
             </h1>

@@ -63,7 +63,7 @@ const ContactForm: FC = () => {
                     required={true}
                     {...register('service')}
                 >
-                    <option value="" disabled selected>Choose a product</option>
+                    <option value="" disabled>Choose a product</option>
                     <option value="rails">Rails</option>
                     <option value="staircases">Staircases</option>
                     <option value="windowGuards">Window Guards</option>
